@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Animation - Moving Element Across the Screen</title>
+  <style>
+    /* Set up the element to be animated */
+    .moving-element {
+      width: 50px;
+      height: 50px;
+      background-color: blue;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateX(-100%);
+      animation: moveElement 4s linear infinite; /* Set up the animation */
+    }
+
+    /* Define the animation */
+    @keyframes moveElement {
+      0% {
+        transform: translateX(-100%); /* Start from the left edge of the screen */
+      }
+      100% {
+        transform: translateX(100%); /* Move to the right edge of the screen */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="moving-element"></div>
+</body>
+</html>
